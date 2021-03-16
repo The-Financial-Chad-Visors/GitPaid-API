@@ -10,8 +10,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use("/", require("./routes"));
 
-const port = 2334;
+const PORT = process.env.PORT || 5000;
 
-app.listen(port, () => {
-  console.log(`We're live on port ${port}!`);
+app.listen(PORT, () => {
+  console.log(`We're live on port ${PORT}!`);
 });
